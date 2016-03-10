@@ -1,0 +1,23 @@
+<div ng-controller="threadPageController"> 
+    <div class="alert alert-info">
+      <h3>{{thread.title}}</h3>
+    </div>
+    <div class="alert alert-info">
+      <strong>{{thread.username}} </strong> &nbsp;&nbsp;&nbsp;    {{thread.time12 | date: 'medium'}}<br><br>
+      {{thread.Text12}}
+    </div>
+    <div class="alert alert-warning"> 
+        <input type="text" ng-model="newCUser" placeholder="Your name..."/ size="10"> <br><br>
+        <input type="text" ng-model="newComment" placeholder="Write a comment..."/ size="20"> <br><br>
+        <button ng-click="addComment()" class="btn btn-warning">Add Comment</button>
+    </div> 
+    <div class="alert alert-warning"> 
+        <div ng-repeat="comment in thread.comments"> 
+
+        {{comment.newCUser}}: {{comment.text}} - {{thread.time12 | date: 'MMM d'}}</div> 
+        <div ng-if="!thread.comments.length">There are no comments on this thread</div> 
+    </div> 
+        <button onclick="window.location.href='/#/main'" class="btn btn-info"  style="width:100%">Back</button><br> <br>
+</div>
+
+ 

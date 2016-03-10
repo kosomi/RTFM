@@ -1,0 +1,11 @@
+
+<div ng-controller="mainPageController"> 
+    <div> 
+        <div ng-repeat="thread in threads | orderBy: '+date'" class="alert alert-success">
+           <a ng-href="#/thread/{{thread.$id}}"> {{thread.title}} : {{thread.username}}  ({{thread.comments.length}}) - {{thread.time12 | date: 'MMM d'}} </a>
+        </div> 
+    </div> 
+</div>
+<center>
+ 
+        <button onclick="window.location.href='/#/write'" class="btn btn-success"  style="width:100%">Write</button><br> 
