@@ -1,6 +1,6 @@
 angular.module('rtfmApp', ['ngRoute', 'firebase']) 
 .constant('fb', { 
-  url: 'https://welcometosir.firebaseio.com/restaurant' 
+  url: 'https://jjjjjjjjj.firebaseio.com/restaurant' 
 }) 
 .config(function($routeProvider){ 
         $routeProvider. 
